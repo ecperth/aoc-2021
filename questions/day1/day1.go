@@ -3,6 +3,7 @@ package day1
 import (
 	util "adventOfCode/util"
 	"fmt"
+	"strconv"
 )
 
 func Solve() {
@@ -13,8 +14,8 @@ func Solve() {
 
 	inputInt := util.StringsToInts(inputStr)
 
-	fmt.Println(part1(inputInt))
-	fmt.Println(part2(inputInt))
+	fmt.Println("Part 1: " + strconv.Itoa(part1(inputInt)))
+	fmt.Println("Part 2: " + strconv.Itoa(part2(inputInt)))
 }
 
 func part1(input []int) int {
