@@ -4,6 +4,7 @@ import (
 	"adventOfCode/2021/questions/day1"
 	"adventOfCode/2021/questions/day2"
 	"adventOfCode/2021/questions/day3"
+	"adventOfCode/2021/questions/day4"
 )
 
 func Solve(day int) {
@@ -15,5 +16,7 @@ func Solve(day int) {
 		day2.Solve()
 	case 3:
 		day3.Solve()
+	case 4:
+		day4.Solve()
 	}
 }
