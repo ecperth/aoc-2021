@@ -1,11 +1,11 @@
 package day5
 
 import (
-	util "adventOfCode/2021/util"
-	"fmt"
-	"math"
-	"strconv"
-	"strings"
+util "adventOfCode/2021/util"
+"fmt"
+"math"
+"strconv"
+"strings"
 )
 
 func Solve() {
