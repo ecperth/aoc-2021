@@ -9,10 +9,10 @@ func IsIntInSlice(s []int, str int) bool {
 	return false
 }
 
-func NewInts(n, v int) []int {
-	s := make([]int, n)
+func NewUniformIntSlice(len, value int) []int {
+	s := make([]int, len)
 	for i := range s {
-		s[i] = v
+		s[i] = value
 	}
 	return s
 }

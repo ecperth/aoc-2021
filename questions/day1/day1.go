@@ -1,7 +1,7 @@
 package day1
 
 import (
-	util "adventOfCode/2021/util"
+	"adventOfCode/2021/util"
 	"fmt"
 	"strconv"
 )

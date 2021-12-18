@@ -1,7 +1,7 @@
 package day5
 
 import (
-util "adventOfCode/2021/util"
+"adventOfCode/2021/util"
 "fmt"
 "math"
 "strconv"
@@ -120,7 +120,7 @@ func parseStartAndEndCoordinate(input string) ([]int, []int) {
 	return startPos, endPos
 }
 
-func getMinMax(val1 int, val2 int) (int, int) {
+func getMinMax(val1, val2 int) (int, int) {
 
 	if val1 < val2 {
 		return val1, val2
@@ -128,7 +128,7 @@ func getMinMax(val1 int, val2 int) (int, int) {
 	return val2, val1
 }
 
-func getDirVector(point1 []int, point2 []int) [2]int{
+func getDirVector(point1, point2 []int) [2]int{
 
 	return [2]int{compareInt(point1[0], point2[0]), compareInt(point1[1], point2[1])}
 }
@@ -139,7 +139,7 @@ func getLength(point1 []int, point2 []int) int{
 		math.Abs(float64(point1[0] - point2[0])), math.Abs(float64(point1[1] - point2[1]))))
 }
 
-func compareInt(i1 int, i2 int) int{
+func compareInt(i1, i2 int) int{
 
 	if i1 > i2{
 		return -1
