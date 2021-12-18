@@ -1,12 +1,14 @@
 package day1
 
 import (
-	util "adventOfCode/util"
+	util "adventOfCode/2021/util"
 	"fmt"
 	"strconv"
 )
 
 func Solve() {
+	// https://adventofcode.com/2021/day/1
+
 	inputStr, err := util.ScanLines("input/day1.txt")
 	if err != nil {
 		fmt.Println(err)
