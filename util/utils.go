@@ -9,6 +9,21 @@ func IsIntInSlice(s []int, str int) bool {
 	return false
 }
 
+func GetMaxAndMinIntFromSlice(s []int) (int, int) {
+	maxValue := 0
+	minValue := -1
+
+	for _, element := range s {
+		if element > maxValue {
+			maxValue = element
+		} else if minValue == -1 || element < minValue {
+			minValue = element
+		}
+	}
+
+	return maxValue, minValue
+}
+
 func NewUniformIntSlice(len, value int) []int {
 	s := make([]int, len)
 	for i := range s {

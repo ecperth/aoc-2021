@@ -42,7 +42,9 @@ func part1(input []string) int {
 }
 
 func part2(input []string) int {
+	 //Note there must be a way of calculating for each starting point
+	 //how many fish will result from that fish. Just need to figure something like
+	 //that out and then sum.
 
-    return 0
-
+	return 0
 }
