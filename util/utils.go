@@ -1,8 +1,17 @@
 package util
 
-func IsIntInSlice(s []int, str int) bool {
+func IsIntInSlice(s []int, x int) bool {
 	for _, v := range s {
-		if v == str {
+		if v == x {
+			return true
+		}
+	}
+	return false
+}
+
+func IsStringInSlice(s []string, x string) bool {
+	for _, v := range s {
+		if v == x {
 			return true
 		}
 	}

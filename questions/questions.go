@@ -8,6 +8,7 @@ import (
 	"adventOfCode/2021/questions/day5"
 	"adventOfCode/2021/questions/day6"
 	"adventOfCode/2021/questions/day7"
+	"adventOfCode/2021/questions/day8"
 )
 
 func Solve(day int) {
@@ -27,5 +28,7 @@ func Solve(day int) {
 		day6.Solve()
 	case 7:
 		day7.Solve()
+	case 8:
+		day8.Solve()
 	}
 }
