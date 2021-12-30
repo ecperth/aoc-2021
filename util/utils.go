@@ -1,5 +1,7 @@
 package util
 
+import "strconv"
+
 func IsIntInSlice(s []int, x int) bool {
 	for _, v := range s {
 		if v == x {
@@ -12,6 +14,15 @@ func IsIntInSlice(s []int, x int) bool {
 func IsStringInSlice(s []string, x string) bool {
 	for _, v := range s {
 		if v == x {
+			return true
+		}
+	}
+	return false
+}
+
+func IsPointInSlice(s [][2]int, cord[2]int) bool {
+	for _, v := range s {
+		if v == cord {
 			return true
 		}
 	}
@@ -39,4 +50,9 @@ func NewUniformIntSlice(len, value int) []int {
 		s[i] = value
 	}
 	return s
+}
+
+func Uint8ToInt(i uint8) int {
+	intValue, _ := strconv.Atoi(string(i))
+	return intValue
 }
