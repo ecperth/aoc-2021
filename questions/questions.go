@@ -2,6 +2,7 @@ package questions
 
 import (
 	"adventOfCode/2021/questions/day1"
+	"adventOfCode/2021/questions/day10"
 	"adventOfCode/2021/questions/day2"
 	"adventOfCode/2021/questions/day3"
 	"adventOfCode/2021/questions/day4"
@@ -33,5 +34,7 @@ func Solve(day int) {
 		day8.Solve()
 	case 9:
 		day9.Solve()
+	case 10:
+		day10.Solve()
 	}
 }
