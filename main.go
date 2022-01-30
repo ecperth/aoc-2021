@@ -1,7 +1,7 @@
 package main
 
 import (
-	"adventOfCode/2021/questions"
+	"github.com/ecperth/aoc-2021/questions"
 	"fmt"
 	"time"
 )

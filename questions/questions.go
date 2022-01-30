@@ -1,16 +1,16 @@
 package questions
 
 import (
-	"adventOfCode/2021/questions/day1"
-	"adventOfCode/2021/questions/day10"
-	"adventOfCode/2021/questions/day2"
-	"adventOfCode/2021/questions/day3"
-	"adventOfCode/2021/questions/day4"
-	"adventOfCode/2021/questions/day5"
-	"adventOfCode/2021/questions/day6"
-	"adventOfCode/2021/questions/day7"
-	"adventOfCode/2021/questions/day8"
-	"adventOfCode/2021/questions/day9"
+	"github.com/ecperth/aoc-2021/questions/day1"
+	"github.com/ecperth/aoc-2021/questions/day10"
+	"github.com/ecperth/aoc-2021/questions/day2"
+	"github.com/ecperth/aoc-2021/questions/day3"
+	"github.com/ecperth/aoc-2021/questions/day4"
+	"github.com/ecperth/aoc-2021/questions/day5"
+	"github.com/ecperth/aoc-2021/questions/day6"
+	"github.com/ecperth/aoc-2021/questions/day7"
+	"github.com/ecperth/aoc-2021/questions/day8"
+	"github.com/ecperth/aoc-2021/questions/day9"
 )
 
 func Solve(day int) {

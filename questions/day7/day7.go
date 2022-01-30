@@ -1,7 +1,7 @@
 package day7
 
 import (
-	util "adventOfCode/2021/util"
+	"github.com/ecperth/aoc-2021/util"
 	"fmt"
 	"math"
 	"strconv"

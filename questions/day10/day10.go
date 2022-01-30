@@ -1,8 +1,8 @@
 package day10
 
 import (
-	"adventOfCode/2021/util"
 	"fmt"
+	"github.com/ecperth/aoc-2021/util"
 	"sort"
 	"strconv"
 )
