@@ -1,6 +1,6 @@
 https://adventofcode.com/
 
-Intall golang-go:
+Install golang:
 https://go.dev/doc/install
 
 Check golang is installed:
