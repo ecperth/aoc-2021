@@ -1,8 +1,8 @@
 package day8
 
 import (
-	"github.com/ecperth/aoc-2021/util"
 	"fmt"
+	"github.com/ecperth/aoc-2021/util"
 	"sort"
 	"strconv"
 	"strings"

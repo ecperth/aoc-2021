@@ -1,8 +1,8 @@
 package day6
 
 import (
-	"github.com/ecperth/aoc-2021/util"
 	"fmt"
+	"github.com/ecperth/aoc-2021/util"
 	"strconv"
 	"strings"
 )

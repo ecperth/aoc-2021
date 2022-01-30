@@ -1,11 +1,11 @@
 package day5
 
 import (
-"github.com/ecperth/aoc-2021/util"
-"fmt"
-"math"
-"strconv"
-"strings"
+	"fmt"
+	"github.com/ecperth/aoc-2021/util"
+	"math"
+	"strconv"
+	"strings"
 )
 
 func Solve() {

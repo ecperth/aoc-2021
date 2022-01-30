@@ -1,8 +1,8 @@
 package day3
 
 import (
-	"github.com/ecperth/aoc-2021/util"
 	"fmt"
+	"github.com/ecperth/aoc-2021/util"
 	"math"
 	"strconv"
 )

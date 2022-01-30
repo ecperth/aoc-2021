@@ -2,6 +2,9 @@ package util
 
 import "strconv"
 
+//TODO replace some of these methods with generics
+//https://tip.golang.org/doc/tutorial/generics
+
 func IsIntInSlice(s []int, x int) bool {
 	for _, v := range s {
 		if v == x {

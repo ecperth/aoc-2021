@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/ecperth/aoc-2021/questions"
 	"fmt"
+	"github.com/ecperth/aoc-2021/questions"
 	"time"
 )
 
