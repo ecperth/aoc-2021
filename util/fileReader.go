@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"os"
 	"strconv"
+	"strings"
 )
 
 func ScanLines(path string) ([]string, error) {
@@ -50,13 +51,30 @@ func ScanWords(path string) ([]string, error) {
 	return words, nil
 }
 
-func StringsToInts(strings []string) []int {
+func StringsToInts(input []string) []int {
 
-	ints := make([]int, len(strings))
+	output := make([]int, len(input))
 
-	for i, s := range strings {
-		ints[i], _ = strconv.Atoi(s)
+	for i, s := range input {
+		output[i], _ = strconv.Atoi(s)
 	}
 
-	return ints
+	return output
+}
+
+func StringsToIntMatrix(input []string) [][]int {
+	output := make([][]int, len(input))
+
+	for i, row := range input{
+		intRow := make([]int, len(row))
+
+		chars := strings.Split(row,"")
+
+		for j, char := range chars{
+			intRow[j], _ = strconv.Atoi(char)
+		}
+
+		output[i] = intRow
+	}
+	return output
 }

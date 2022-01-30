@@ -3,6 +3,7 @@ package questions
 import (
 	"github.com/ecperth/aoc-2021/questions/day1"
 	"github.com/ecperth/aoc-2021/questions/day10"
+	"github.com/ecperth/aoc-2021/questions/day11"
 	"github.com/ecperth/aoc-2021/questions/day2"
 	"github.com/ecperth/aoc-2021/questions/day3"
 	"github.com/ecperth/aoc-2021/questions/day4"
@@ -36,5 +37,7 @@ func Solve(day int) {
 		day9.Solve()
 	case 10:
 		day10.Solve()
+	case 11:
+		day11.Solve()
 	}
 }
