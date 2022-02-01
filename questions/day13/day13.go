@@ -1,0 +1,30 @@
+package day13
+
+import (
+	"fmt"
+	"github.com/ecperth/aoc-2021/util"
+	"strconv"
+)
+
+func Solve() {
+	// https://adventofcode.com/2021/day/13
+
+	inputStr, err := util.ScanLines("input/day13.txt")
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	fmt.Println("Part 1: " + strconv.Itoa(part1(inputStr)))
+	fmt.Println("Part 2: " + strconv.Itoa(part2(inputStr)))
+}
+
+func part1(input []string) int {
+
+	return 0
+}
+
+func part2(input []string) int {
+
+    return 0
+
+}
