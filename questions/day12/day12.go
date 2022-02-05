@@ -8,12 +8,12 @@ import (
 	"unicode"
 )
 
-type Cave struct {
+type cave struct {
 	name     string
-	children []*Cave
+	children []*cave
 }
 
-func isCaveInSlice(s []*Cave, x *Cave) bool {
+func isCaveInSlice(s []*cave, x *cave) bool {
 	for _, v := range s {
 		if v == x {
 			return true
@@ -22,7 +22,7 @@ func isCaveInSlice(s []*Cave, x *Cave) bool {
 	return false
 }
 
-func doesSliceHaveADupe(s []*Cave) bool {
+func doesSliceHaveADupe(s []*cave) bool {
 
 	for i1, v1 := range s {
 		for i2, v2 := range s {
@@ -34,7 +34,7 @@ func doesSliceHaveADupe(s []*Cave) bool {
 	return false
 }
 
-var nameToCaveMap = make(map[string]*Cave)
+var nameToCaveMap = make(map[string]*cave)
 
 func Solve() {
 	// https://adventofcode.com/2021/day/12
@@ -46,20 +46,20 @@ func Solve() {
 
 	//Build the cave graph
 
-	nameToCaveMap["start"] = &Cave{"start", []*Cave{}}
-	nameToCaveMap["end"] = &Cave{"end", []*Cave{}}
+	nameToCaveMap["start"] = &cave{"start", []*cave{}}
+	nameToCaveMap["end"] = &cave{"end", []*cave{}}
 
 	for _, line := range inputStr {
 		AtoB := strings.Split(line,"-")
 
 		_, bFound := nameToCaveMap[AtoB[1]]
 		if !bFound{
-			nameToCaveMap[AtoB[1]] = &Cave{AtoB[1],[]*Cave{}}
+			nameToCaveMap[AtoB[1]] = &cave{AtoB[1],[]*cave{}}
 		}
 
 		_, AFound := nameToCaveMap[AtoB[0]]
 		if !AFound{
-			nameToCaveMap[AtoB[0]] = &Cave{AtoB[0],[]*Cave{}}
+			nameToCaveMap[AtoB[0]] = &cave{AtoB[0],[]*cave{}}
 		}
 
 		nameToCaveMap[AtoB[0]].children = append(nameToCaveMap[AtoB[0]].children, nameToCaveMap[AtoB[1]])
@@ -76,8 +76,8 @@ func part1() int {
 
 	totalPaths := 0
 
-	for _, cave := range nameToCaveMap["start"].children{
-		totalPaths += findPathsFromCavePart1(cave, []*Cave{})
+	for _, concreteCave := range nameToCaveMap["start"].children{
+		totalPaths += findPathsFromCavePart1(concreteCave, []*cave{})
 	}
 
 	return totalPaths
@@ -87,15 +87,15 @@ func part2() int {
 
 	totalPaths := 0
 
-	for _, cave := range nameToCaveMap["start"].children{
-		totalPaths += findPathsFromCavePart2(cave, []*Cave{})
+	for _, concreteCave := range nameToCaveMap["start"].children{
+		totalPaths += findPathsFromCavePart2(concreteCave, []*cave{})
 	}
 
 	return totalPaths
 
 }
 
-func findPathsFromCavePart1(cave *Cave, visitedSmallCaves []*Cave) int{
+func findPathsFromCavePart1(cave *cave, visitedSmallCaves []*cave) int{
 
 	if cave.name == "end"{
 		return 1
@@ -120,7 +120,7 @@ func findPathsFromCavePart1(cave *Cave, visitedSmallCaves []*Cave) int{
 	return pathsFromHere
 }
 
-func findPathsFromCavePart2(cave *Cave, visitedSmallCaves []*Cave) int{
+func findPathsFromCavePart2(cave *cave, visitedSmallCaves []*cave) int{
 
 	if cave.name == "end"{
 		return 1

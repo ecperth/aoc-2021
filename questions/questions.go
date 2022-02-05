@@ -6,6 +6,7 @@ import (
 	"github.com/ecperth/aoc-2021/questions/day11"
 	"github.com/ecperth/aoc-2021/questions/day12"
 	"github.com/ecperth/aoc-2021/questions/day13"
+	"github.com/ecperth/aoc-2021/questions/day14"
 	"github.com/ecperth/aoc-2021/questions/day2"
 	"github.com/ecperth/aoc-2021/questions/day3"
 	"github.com/ecperth/aoc-2021/questions/day4"
@@ -45,5 +46,7 @@ func Solve(day int) {
 		day12.Solve()
 	case 13:
 		day13.Solve()
+	case 14:
+		day14.Solve()
 	}
 }
