@@ -42,9 +42,37 @@ func part1(input []string) int {
 }
 
 func part2(input []string) int {
-	 //Note there must be a way of calculating for each starting point
-	 //how many fish will result from that fish. Just need to figure something like
-	 //that out and then sum.
+	//Note there must be a way of calculating for each starting point
+	//how many fish will result from that fish. Just need to figure something like
+	//that out and then sum.
 
-	return 0
+	//Nope couldn't come up with any arithmetic way of solving. Turns out i actually
+	//should be keeping track of number of fish on each day instead of the array of fish.
+
+	lanternFish := util.StringsToInts(strings.Split(input[0], ","))
+
+	var dayToFishCountMap = make(map[int]int)
+	for _, fish := range lanternFish{
+		dayToFishCountMap[fish] = dayToFishCountMap[fish] + 1
+	}
+
+	for i := 1; i <= 256; i++ {
+		var nextDayToFishCountMap = make(map[int]int)
+		for day, count := range dayToFishCountMap{
+			if day == 0{
+				nextDayToFishCountMap[6] += count
+				nextDayToFishCountMap[8] += count
+			} else {
+				nextDayToFishCountMap[day - 1] += count
+			}
+		}
+		dayToFishCountMap = nextDayToFishCountMap
+	}
+
+	totalFish := 0
+	for _, count := range dayToFishCountMap{
+		totalFish += count
+	}
+
+	return totalFish
 }
